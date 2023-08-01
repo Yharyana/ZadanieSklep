@@ -1,11 +1,14 @@
 from sklep.produkty import *
 def lista(listar):
-    input_b=0.0
-    input_ilosc =0.0
 
-    x=True
-    listar = listar[""]
-    while x==True and __name__=='__main__':
+
+
+    listar = []
+    x = True
+    while x==True:
+        input_b = ""
+        input_b_check = 0
+        input_ilosc = 0
         j = 1
         inpute=input("hej chcesz dodać coś do listy zamowien? By zobaczyc prodkuty cene itp wcisnij A by dodac cos wcisnij B by zzakonnczyć program wscisnij X")
         if inpute=='X':
@@ -27,7 +30,12 @@ def lista(listar):
                 j+=1
         else:
             input_b=input("dobra to który chcesz produkt na swoja liste zakupów? ( napisz 1,2 badz 3")
-            input_ilosc=("i jak duzo ma tego byc?")
+            input_b_check=int(input_b)
+            input_b=produktyr[int(input_b)-1]
+            input_ilosc=int(input("i jak duzo ma tego byc?"))
+
+        if dostepnosc_w_kilo[input_b_check]<input_ilosc:
+           print("az tyle produktu owego nie posiada juz sklep!")
 
 
 
