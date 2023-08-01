@@ -3,3 +3,4 @@ print("hello")
 print(__name__)
 lista_zakopow=[]
 lista(lista_zakopow)
+print(lista_zakopow)
